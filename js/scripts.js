@@ -4,6 +4,11 @@ var zoomMap= 12;
 // Define the map
 var map = L.map('my-map').setView(centerMap, zoomMap);
 
+L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
 // var colors = [
 //   'blue',
 //   'red',
@@ -19,9 +24,6 @@ var map = L.map('my-map').setView(centerMap, zoomMap);
 // 	ext: 'png'
 // }).addTo(map);
 
-L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
 
 // getPlaces((places) => {
 //
