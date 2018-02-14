@@ -126,7 +126,7 @@ getPlaces((places) => {
 	  	if (home.r_we_cool === 'Nah') r_we_coolColor = 'red';
 
 	  const MarkerOptions = {
-	    radius: 6,
+	    radius: 10,
 	    opacity: 1,
 	    fillColor: r_we_coolColor,
 	    fillOpacity: 0.9,
