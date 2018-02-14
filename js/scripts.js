@@ -122,7 +122,7 @@ getPlaces((places) => {
 	  const latLon = [home.lat, home.lon];
 
 	  var r_we_coolColor = '#FFF';
-	  	if (home.r_we_cool === 'Cool') r_we_coolColor = 'pink';
+	  	if (home.r_we_cool === 'Cool') r_we_coolColor = 'blue';
 	  	if (home.r_we_cool === 'Nah') r_we_coolColor = 'red';
 
 	  const MarkerOptions = {
