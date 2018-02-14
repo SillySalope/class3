@@ -121,3 +121,32 @@ function getPlaces(callback) {
     callback(places);
   });
 }
+
+//MINE
+
+
+
+// 2. OPERATING CODE MODIFIED FOR GETPLACES FUNCTION
+getPlaces((places) => {
+	places.forEach(function(home) {
+	  const latLon = [home.lat, home.lon];
+
+	  var r_we_coolColor = '#FFF';
+	  	if (home.r_we_cool === 'Cool') r_we_coolColor = 'blue';
+	  	if (home.r_we_cool === 'Nah') r_we_coolColor = 'red';
+			if (home.r_we_cool === 'Of course') r_we_coolColor = 'green';
+
+	  const MarkerOptions = {
+	    radius: 10,
+	    opacity: 1,
+	    fillColor: r_we_coolColor,
+	    fillOpacity: 0.9,
+	    color: '#FFF',
+	    weight: 2,
+	  };
+
+			L.circleMarker(latLon, MarkerOptions)
+			.bindPopup('Are we cool with' + ' ' + home.gf + '?' + '<br><b>' + home.r_we_cool + '</b>'+' '+'since'+ ' ' + home.year, {offset: [0, -6]})
+			.addTo(map);
+		});
+	});
